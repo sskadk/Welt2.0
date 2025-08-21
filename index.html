@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welt Research Pvt. Ltd.</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="static/css/Welt Research Pvt. Ltd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gradient-to-br from-green-100 via-green-50 to-green-200 text-gray-800">
+
+  <!-- Custom cursor elements -->
+  <div id="cursor"></div>
+  <div id="follower"></div>
+
+
+  <!-- Navbar -->
+<header id="navbar" class="sticky-navbar backdrop-blur-md shadow-md">
+  <nav class="flex justify-between items-center px-6 py-4 max-w-6xl w-full mx-auto">
+    <!-- Logo -->
+    <a href="#home" class="font-bold text-green-700 text-lg">Welt Research Pvt. Ltd.</a>
+
+    <!-- Hamburger Button (visible on small screens) -->
+    <button id="menu-btn" class="md:hidden text-green-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Menu Items -->
+    <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 font-medium text-green-800">
+      <li><a href="#home" class="hover:text-green-600 transition block py-2 md:py-0">Home</a></li>
+      <li><a href="#about" class="hover:text-green-600 transition block py-2 md:py-0">About</a></li>
+      <li><a href="#vision" class="hover:text-green-600 transition block py-2 md:py-0">Vision</a></li>
+      <li><a href="#services" class="hover:text-green-600 transition block py-2 md:py-0">Services</a></li>
+      <li><a href="#team" class="hover:text-green-600 transition block py-2 md:py-0">Team</a></li>
+      <li><a href="#contact" class="hover:text-green-600 transition block py-2 md:py-0">Contact</a></li>
+      <li><a href="https://wa.me/917838518511" target="_blank" class="hover:text-green-600 transition block py-2 md:py-0">WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!-- Hero -->
+    <section id="home" class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-[100vh] object-cover">
+        <source src="Welt Research Pvt. Ltd..mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Carousel Wrapper -->
+    <div class="relative w-full overflow-hidden" id="carousel">
+
+    <!-- Slides -->
+    <div class="flex transition-transform duration-700 ease-in-out" id="carousel-slides">
+        
+        <!-- Slide 1 -->
+        <div class="min-w-full relative">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/0"></div>
+        <!-- Content -->
+            <div class="relative z-10 w-full h-[80vh] flex flex-col items-center justify-center text-center space-y-6 px-6">
+            <div class="lg:w-1/2 space-y-6 flex flex-col items-center justify-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Innovating with Nature</h1>
+            <p class="text-white text-lg md:text-xl">We harness the power of natural sciences to create sustainable, future-ready solutions.</p>
+            <div class="flex gap-4 justify-center lg:justify-start">
+                <a href="#contact" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-500 transition">Get in Touch</a>
+                <a href="#services" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-green-700 transition">Explore Services</a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="min-w-full relative">
+        <div class="absolute inset-0 bg-black/0"></div>
+        <div class="relative z-10 w-full h-[80vh] flex flex-col items-center justify-center text-center space-y-6 px-6">
+            <div class="lg:w-1/2 space-y-6 flex flex-col items-center justify-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Smart Sustainable Tech</h1>
+            <p class="text-white text-lg md:text-xl">Leveraging AI & green energy to reshape industries for tomorrow.</p>
+            <div class="flex gap-4 justify-center lg:justify-start">
+                <a href="#about" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-500 transition">Learn More</a>
+                <a href="#projects" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-green-700 transition">See Projects</a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="min-w-full relative">
+        <div class="absolute inset-0 bg-black/0"></div>
+            <div class="relative z-10 w-full h-[80vh] flex flex-col items-center justify-center text-center space-y-6 px-6">
+            <div class="lg:w-1/2 space-y-6 flex flex-col items-center justify-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Partnering for Growth</h1>
+            <p class="text-white text-lg md:text-xl">Collaborating with industries and communities for impactful change.</p>
+            <div class="flex gap-4 justify-center lg:justify-start">
+                <a href="#partners" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-500 transition">Our Partners</a>
+                <a href="#join" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-green-700 transition">Join Us</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+        <button id="prev" 
+        class="absolute top-1/2 left-4 -translate-y-1/2 
+        bg-white/20 backdrop-blur-md text-white 
+        w-12 h-12 flex items-center justify-center 
+        rounded-full shadow-lg border border-white/10 
+        hover:bg-white/30 hover:scale-110 transition-all duration-300">
+        ‹
+        </button>
+
+        <button id="next" 
+        class="absolute top-1/2 right-4 -translate-y-1/2 
+        bg-white/20 backdrop-blur-md text-white 
+        w-12 h-12 flex items-center justify-center 
+        rounded-full shadow-lg border border-white/10 
+        hover:bg-white/30 hover:scale-110 transition-all duration-300">
+        ›
+        </button>
+    </div>
+    </section>
+
+<div class="sections-wrapper">
+  <!-- About -->
+<section id="about" class="py-24 relative flip-section">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="glass-section p-12 rounded-2xl shadow-lg bg-white/80 max-w-7xl mx-auto space-y-10">
+  <!-- Heading -->
+  <div class="text-center space-y-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-800 text-center">About Us</h2>
+    <p class="text-green-700 text-lg leading-relaxed text-justify">
+      Welt Research Pvt. Ltd. is a registered company established for research and experimental 
+      development on natural sciences. We are focused on exploration and innovations to 
+      make society better while working towards a green and sustainable future.
+    </p>
+  </div>
+
+  <!-- Main Paragraph -->
+  <p class="text-gray-700 text-lg leading-relaxed text-justify">
+    We aim to solve socio-scientific problems to build a society where no one is left behind— 
+    a society achieving <span class="font-semibold text-green-700">“Prosperity and Happiness Together.”</span> 
+    Our mission includes the development of technologies for:
+  </p>
+  <!-- Bullet Points Minimal -->
+  <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-left text-gray-600 text-sm leading-relaxed">
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Pollution and Climate Change
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Agriculture and Food Security
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Medical Instrumentation
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Big Data Management
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Defence Technologies
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Other Scientific and Industrial Research
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="w-2 h-2 mt-2 rounded-full bg-green-600"></span>
+      Computer Modelling, Simulations, AI & ML, IoT, Software Solutions
+    </li>
+  </ul>
+
+
+  <!-- Extended Explanation -->
+  <p class="text-gray-700 text-lg leading-relaxed text-justify">
+    These research domains are crucial for addressing today’s global challenges and 
+    advancing technologies. From mitigating environmental degradation to 
+    strengthening food security, enhancing healthcare with medical instrumentation, 
+    managing massive datasets, and innovating in defence and intelligent systems— 
+    each area contributes to scientific progress, industrial development, 
+    and the overall betterment of society.
+  </p>
+</div>
+
+
+
+<!-- 3 Pillars -->
+<div class="grid md:grid-cols-3 gap-10 mt-16">
+  <!-- Commitment -->
+  <div class="bg-white rounded-2xl shadow-md p-8 text-center border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-green-100 text-green-700 shadow-md">
+      <i data-lucide="globe-2" class="w-8 h-8"></i>
+    </div>
+    <h3 class="font-semibold text-green-900 text-xl mb-3">Commitment</h3>
+    <p class="text-green-700 text-sm leading-relaxed">
+      Unwavering dedication to impactful, ethical, and innovative research that shapes tomorrow.
+    </p>
+  </div>
+
+  <!-- Focus -->
+  <div class="bg-white rounded-2xl shadow-md p-8 text-center border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-green-100 text-green-700 shadow-md">
+      <i data-lucide="microscope" class="w-8 h-8"></i>
+    </div>
+    <h3 class="font-semibold text-green-900 text-xl mb-3">Focus</h3>
+    <p class="text-green-700 text-sm leading-relaxed">
+      Delivering reliable results through precision, advanced tools, and deep expertise.
+    </p>
+  </div>
+
+  <!-- Collaboration -->
+  <div class="bg-white rounded-2xl shadow-md p-8 text-center border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-green-100 text-green-700 shadow-md">
+      <i data-lucide="users" class="w-8 h-8"></i>
+    </div>
+    <h3 class="font-semibold text-green-900 text-xl mb-3">Collaboration</h3>
+    <p class="text-green-700 text-sm leading-relaxed">
+      Partnering across industries and disciplines to maximize collective impact.
+    </p>
+  </div>
+</div>
+
+    <!-- Mission & Vision -->
+    <div class="grid md:grid-cols-2 gap-12 mt-20">
+      <div class="glass-section p-10">
+        <h3 class="text-2xl font-bold text-green-900 mb-4">Our Mission</h3>
+        <p class="text-green-700 leading-relaxed">
+          To accelerate global research with innovative solutions that address environmental, societal, and industrial challenges. 
+          We aim to bridge the gap between science and practical application for sustainable growth.
+        </p>
+      </div>
+      <div class="glass-section p-10">
+        <h3 class="text-2xl font-bold text-green-900 mb-4">Our Vision</h3>
+        <p class="text-green-700 leading-relaxed">
+          To become a globally recognized research hub, fostering innovation, collaboration, and excellence 
+          that drives transformative change for humanity and the planet.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline / History -->
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold text-green-900 text-center mb-10">Our Journey</h3>
+      <div class="relative border-l-2 border-green-500 ml-4 space-y-10">
+        <div class="ml-6">
+          <span class="absolute -left-3 w-6 h-6 bg-green-500 rounded-full"></span>
+          <h4 class="text-green-900 font-semibold">2018 – Founded</h4>
+          <p class="text-green-700 text-sm">Established with a vision to bridge academia and industry through advanced research.</p>
+        </div>
+        <div class="ml-6">
+          <span class="absolute -left-3 w-6 h-6 bg-green-500 rounded-full"></span>
+          <h4 class="text-green-900 font-semibold">2020 – Expansion</h4>
+          <p class="text-green-700 text-sm">Expanded our research domains into climate science and sustainable technologies.</p>
+        </div>
+        <div class="ml-6">
+          <span class="absolute -left-3 w-6 h-6 bg-green-500 rounded-full"></span>
+          <h4 class="text-green-900 font-semibold">2023 – Global Collaborations</h4>
+          <p class="text-green-700 text-sm">Partnered with international institutes to push the boundaries of innovation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="glass-section p-12 mt-20 text-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-green-900 mb-4">Join Us in Shaping the Future</h3>
+      <p class="text-green-700 max-w-2xl mx-auto mb-6">Whether you’re a researcher, institution, or business, 
+      we welcome collaborations that drive sustainable progress for generations to come.</p>
+      <a href="#contact" class="px-6 py-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition">
+        Contact Us
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 flip-section">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-800 text-center">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-section p-6">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Research & Development</h3>
+          <p class="text-green-700 text-sm">Innovative solutions across biotechnology, environmental science, and sustainable technology.</p>
+        </div>
+        <div class="glass-section p-6">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Consultancy</h3>
+          <p class="text-green-700 text-sm">Guiding industries and institutions with expert advice in applied sciences.</p>
+        </div>
+        <div class="glass-section p-6">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Training & Workshops</h3>
+          <p class="text-green-700 text-sm">Hands-on learning opportunities for students, professionals, and researchers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Vision -->
+<section id="vision" class="py-20 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
+  <div class="max-w-6xl mx-auto px-6 glass-section p-10 space-y-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Vision</h2>
+    <p class="text-green-700 text-lg leading-relaxed">
+      At Welt Research Pvt. Ltd., our vision is to create a society where scientific innovation 
+      drives sustainable development, ensuring prosperity and well-being for all.  
+      We strive to solve socio-scientific challenges while fostering environmental stewardship 
+      and technological advancement.
+    </p>
+    <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-left text-green-700 text-sm max-w-3xl mx-auto">
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Promote green and sustainable technologies
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Advance research in natural sciences
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Enhance food security and agriculture innovation
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Develop cutting-edge medical instrumentation
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Harness AI, ML, IoT, and software solutions for societal benefit
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
+        Drive collaborative scientific and industrial research
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- Team -->
+  <section id="team" class="py-20 bg-green-50 flip-section">
+    <div class="max-w-6xl mx-auto px-6 space-y-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-800 text-center">Our Team</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-section h-[28rem] p-6 text-center relative group rounded-xl overflow-hidden cursor-pointer">
+            <img src="static\img\team\st1.webp" 
+                alt="Team Member" 
+                class="mx-auto w-24 h-24 rounded-full mb-4">
+            <h3 class="text-lg font-semibold text-green-800">Shubhansh Tiwari</h3><hr>
+            <p class="text-green-700 text-sm">Founder & President</p><br>
+            <p class="text-black-700 text-sm">shubhanshtiwari24@outlook.com</p>
+
+            <!-- Hover text overlay -->
+            <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+            <p class="text-black text-sm px-4 text-justify">Alumnus of Amity University Haryana in Earth Sciences with a specialization in Climate Studies, he has over 6 years of research experience in Air Quality Dynamics, Dust Storms, Climate Change Impacts, and River Dynamics. His work is published in national and international journals, conference proceedings, and books, including the American Physical Society, and has been featured by NASA. A former student member of the American Physical Society and the Canadian Meteorological and Oceanographic Society, he is currently a member of the Environment and Social Development Association (New Delhi), Institute of Scholars (Bangalore), and Innovative Science Research Society (Shimla). In 2021, he received the “Young Environmentalist Award” from the Environment and Social Development Association at the World Environment Summit. He is also associated with the Centre for Science and Environment and serves on the Governing Council of the Gurukul Global Knowledge Foundation.</p>
+            </div>
+        </div>
+        <div class="glass-section h-[28rem] p-6 text-center relative group rounded-xl overflow-hidden cursor-pointer">
+            <img src="static\img\team\rs2.webp" 
+                alt="Team Member" 
+                class="mx-auto w-24 h-24 rounded-full mb-4">
+            <h3 class="text-lg font-semibold text-green-800">Renuka Sharma</h3><hr>
+            <p class="text-green-700 text-sm">Director & CEO</p><br>
+            <p class="text-black-700 text-sm">renukasharma375@gmail.com</p>
+
+            <!-- Hover text overlay -->
+            <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+            <p class="text-black text-sm px-4 text-justify">Alumnus of Amity University Haryana and University of Mysore. She did her graduation in applied psychology and MBA in Fashion Entrepreneurship. By profession she is a fashion designer and consultant and also a marketing expert. In her 5 years of professional carrier she was the part of different corporate groups including Uniqlo Pvt Ltd, Satya Paul Reliance Brands Ltd and BMW India.</p>
+            </div>
+        </div>
+        <div class="glass-section h-[28rem] p-6 text-center relative group rounded-xl overflow-hidden cursor-pointer">
+            <img src="static\img\team\tm3.webp" 
+                alt="Team Member" 
+                class="mx-auto w-24 h-24 rounded-full mb-4">
+            <h3 class="text-lg font-semibold text-green-800">Tanmay Mukharjee</h3><hr>
+            <p class="text-green-700 text-sm">Co-Founder</p><br>
+            <p class="text-black-700 text-sm">mukherjee.tanmay4497@gmail.com</p>
+
+            <!-- Hover text overlay -->
+            <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+            <p class="text-black text-sm px-4 text-justify">A young explorer by soul, Mr. Tanmay Mukherjee is a MBA graduate with a zeal for more. He has a bachelor's degree in Clinical Psychology Honours from Amity University, Haryana and MBA from Jain University Bangalore. He is having a working experience of more than 3 years with ICIC Bank and also with Lovely Professional University. He worked as a soft skill trainer for the Computer Science Engineering Department at LPU and Presidency University Bengaluru for making the young techies industry and corporate ready.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
+    <div class="max-w-4xl mx-auto px-6 glass-section p-10 space-y-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-800">Contact Us</h2>
+      <p class="text-green-700">We’d love to hear from you. Let’s collaborate for a sustainable future.</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
+        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400"></textarea>
+        <button class="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-600 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-black/30 backdrop-blur-md py-12 text-center text-grey/80">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-left">
+    
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-black-400 font-semibold mb-3">Contact Us</h3>
+      <p><strong>Email:</strong> <a href="mailto:info@weltresearch.com" class="hover:text-[#41a715] transition">info@weltresearch.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+917 838 518 511" class="hover:text-[#41a715] transition">+917 838 518 511</a></p>
+      <p><strong>Headquarters:</strong> New Delhi, NCR - India</p>
+    </div>
+
+    <!-- Quick Links (3-column inline) -->
+    <div>
+      <h3 class="text-black-400 font-semibold mb-3">Quick Links</h3>
+      <div class="grid grid-cols-3 gap-1">
+        <a href="#home" class="hover:text-[#41a715] transition">Home</a>
+        <a href="#about" class="hover:text-[#41a715] transition">About</a>
+        <a href="#vision" class="hover:text-[#41a715] transition">Vision</a>
+        <a href="#services" class="hover:text-[#41a715] transition">Services</a>
+        <a href="#team" class="hover:text-[#41a715] transition">Team</a>
+        <a href="#contact" class="hover:text-[#41a715] transition">Contact</a>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h3 class="text-black-400 font-semibold mb-3">Follow Us</h3>
+      <div class="flex gap-4 text-xl">
+        <a href="https://www.instagram.com/weltresearch/" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/welt-research" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/weltresearch/" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/welt-research" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/weltresearch/" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/917838518511" target="_blank" class="hover:text-[#41a715] transition"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Links / Modal Triggers -->
+  <div class="mt-8">
+    <div class="flex flex-wrap justify-center gap-6 text-white/80">
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="careerModal">Career</span>
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="investorModal">Investor</span>
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="termsModal">Terms & Conditions</span>
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="faqModal">FAQs</span>
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="newsletterModal">Subscribe</span>
+      <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="contactModal">Contact Us</span>
+    </div>
+    <p class="text-sm mt-4">&copy; 2025 Welt Research Pvt. Ltd.</p>
+  </div>
+</footer>
+
+<!-- Modals Container -->
+<div id="modals-container">
+
+  <!-- Generic Modal Structure -->
+  <div id="careerModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 px-4">
+    <div class="bg-white rounded-xl p-8 max-w-lg w-full relative">
+      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('careerModal')">&times;</button>
+      <h2 class="text-2xl font-bold text-green-800 mb-4">Career Opportunities</h2>
+      <p class="text-gray-700 mb-4">Explore career opportunities at Welt Research Pvt. Ltd. Join us in shaping a sustainable future!</p>
+      <button class="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition">Apply Now</button>
+    </div>
+  </div>
+
+  <div id="investorModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 px-4">
+    <div class="bg-white rounded-xl p-8 max-w-lg w-full relative">
+      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('investorModal')">&times;</button>
+      <h2 class="text-2xl font-bold text-green-800 mb-4">Investor Information</h2>
+      <p class="text-gray-700 mb-4">Get the latest financial reports, stock information, and investment opportunities with Welt Research.</p>
+      <button class="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Modal -->
+  <div id="termsModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 px-4">
+    <div class="bg-white rounded-xl p-6 max-w-md w-full relative shadow-lg overflow-y-auto max-h-[90vh]">
+      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('termsModal')">&times;</button>
+      <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Terms & Conditions</h2>
+
+      <div class="space-y-3">
+        <div class="accordion-item border rounded-lg">
+          <button class="w-full text-left px-4 py-3 font-semibold text-green-900 hover:bg-green-50 transition">1. Website Usage</button>
+          <div class="accordion-content px-4 py-2 text-gray-700 text-sm hidden">
+            Users must follow our guidelines while accessing the website. Unauthorized usage, copying, or reproduction of content is strictly prohibited.
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg">
+          <button class="w-full text-left px-4 py-3 font-semibold text-green-900 hover:bg-green-50 transition">2. Intellectual Property</button>
+          <div class="accordion-content px-4 py-2 text-gray-700 text-sm hidden">
+            All content, logos, graphics, and research publications are intellectual property of Welt Research Pvt. Ltd. and cannot be used without permission.
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg">
+          <button class="w-full text-left px-4 py-3 font-semibold text-green-900 hover:bg-green-50 transition">3. Privacy Policy</button>
+          <div class="accordion-content px-4 py-2 text-gray-700 text-sm hidden">
+            We value your privacy and handle personal data in accordance with our privacy policy.
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg">
+          <button class="w-full text-left px-4 py-3 font-semibold text-green-900 hover:bg-green-50 transition">4. Liability</button>
+          <div class="accordion-content px-4 py-2 text-gray-700 text-sm hidden">
+            Welt Research Pvt. Ltd. is not liable for any direct or indirect damages arising from the use of our website, research publications, or services.
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg">
+          <button class="w-full text-left px-4 py-3 font-semibold text-green-900 hover:bg-green-50 transition">5. Modifications</button>
+          <div class="accordion-content px-4 py-2 text-gray-700 text-sm hidden">
+            Terms and conditions may be updated from time to time without prior notice. Users are encouraged to review this section regularly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- FAQ Modal -->
+<div id="faqModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 overflow-auto py-12 px-4">
+  <div class="bg-white rounded-xl p-8 max-w-2xl w-full relative">
+    <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('faqModal')">&times;</button>
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Frequently Asked Questions</h2>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">How can I collaborate with Welt Research?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">You can collaborate by reaching out through our contact form or email.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">What are the current research projects?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">Our current projects focus on pollution and climate change, sustainable agriculture, AI & ML applications, and more.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">How can I apply for an internship?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">Internship applications can be submitted via our website with your resume and cover letter. Selected candidates will be contacted for interviews.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">Do you offer consultancy services?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">Yes, we provide consultancy in environmental research, climate analysis, and sustainable solutions for businesses and organizations.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">Where are you located?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">We are based in India, with offices in multiple cities. You can find our exact locations on the Contact page.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">Can I attend workshops or webinars?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">Yes, we regularly host workshops and webinars. Keep an eye on our website or subscribe to our newsletter for updates.</p>
+    </div>
+
+    <div class="faq-item border-b border-gray-200 py-3 cursor-pointer">
+      <h3 class="faq-question font-semibold text-green-900 text-lg">How do I stay updated on your latest research?</h3>
+      <p class="faq-answer text-gray-700 text-sm mt-2 hidden">You can follow us on social media, subscribe to our newsletter, or regularly visit our website for updates.</p>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Newsletter Modal -->
+  <div id="newsletterModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 px-4">
+    <div class="bg-white rounded-xl p-8 max-w-md w-full relative">
+      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('newsletterModal')">&times;</button>
+      <h2 class="text-2xl font-bold text-green-800 mb-4">Subscribe to Our Newsletter</h2>
+      <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400">
+      <button class="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition w-full">Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50 px-4">
+    <div class="bg-white rounded-xl p-8 max-w-md w-full relative">
+      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onclick="closeModal('contactModal')">&times;</button>
+      <h2 class="text-2xl font-bold text-green-800 mb-4">Contact Us</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400">
+        <textarea rows="4" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400"></textarea>
+        <button class="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-600 transition w-full">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script>
+  // Open modal
+  document.querySelectorAll('[data-modal-target]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = document.getElementById(btn.getAttribute('data-modal-target'));
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+  });
+
+  // Close modal
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Close modal on clicking outside content
+  document.querySelectorAll('#modals-container > div').forEach(modal => {
+    modal.addEventListener('click', e => {
+      if(e.target === modal) closeModal(modal.id);
+    });
+  });
+
+  // Accordion for Terms & FAQ
+  function setupAccordion(containerSelector, itemSelector, answerSelector) {
+    const container = document.querySelector(containerSelector);
+    if(!container) return;
+    container.querySelectorAll(itemSelector).forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector(answerSelector);
+        const isOpen = !answer.classList.contains('hidden');
+        container.querySelectorAll(answerSelector).forEach(a => a.classList.add('hidden'));
+        if(!isOpen) answer.classList.remove('hidden');
+      });
+    });
+  }
+
+  setupAccordion('#termsModal', '.accordion-item', '.accordion-content');
+  setupAccordion('#faqModal', '.faq-item', '.faq-answer');
+</script>
+
+<script src="static/js/Welt.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Lucide Script -->
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: auto; /* remove smooth scroll if conflicts */
+}
+
+/* Hide default pointer */
+body, a, button {
+  cursor: none;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px; /* thinner and professional */
+  height: 10px;
+}
+
+/* Track (background of scrollbar) */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); /* subtle light background */
+  border-radius: 8px;
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #41a715; /* your green color */
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.05); /* slight spacing for clean look */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2e8c0f; /* slightly darker green on hover */
+  transform: scaleY(1.1); /* subtle scale for professional feel */
+}
+
+/* Optional: Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #41a715 rgba(0, 0, 0, 0.05);
+}
+
+/* Small fast pointer */
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #41a715; /* default color */
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease, background-color 0.2s ease;
+}
+
+/* Larger trailing follower */
+#follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #41a715; /* default color */
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, border-color 0.2s ease;
+}
+
+
+/* Floating navbar */
+.sticky-navbar {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease, backdrop-filter 0.3s ease;
+    backdrop-filter: blur(15px);
+    background-color: rgba(187, 201, 184, 0.75);
+    border-radius: 3rem;
+    max-width: 1200px;
+    width: 95%;
+    z-index: 50;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Navbar brand/logo */
+.sticky-navbar .brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+/* Navbar links container */
+.sticky-navbar .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Navbar buttons/links */
+.sticky-navbar .nav-links a,
+.sticky-navbar .nav-links button {
+    color: #1e1e1e;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sticky-navbar .nav-links a:hover,
+.sticky-navbar .nav-links button:hover {
+    background-color: rgba(65, 167, 21, 0.2);
+    color: #41a715;
+}
+
+/* Animated gradient border ONLY when floating */
+.sticky-navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, #5b5e5b, #41a715, #1ecfdbff, #d9ff01, #41a715, #ffffff);
+    background-size: 300% 300%;
+    animation: borderAnim 10s linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Disable border animation when stuck */
+.sticky-navbar.stuck::before {
+    opacity: 0;
+}
+
+/* Stuck/fixed state */
+.sticky-navbar.stuck {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Keyframes for animated border */
+@keyframes borderAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sticky-navbar {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Brand/logo smaller on mobile */
+    .sticky-navbar .brand {
+        font-size: 12px;
+    }
+
+    .sticky-navbar .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .sticky-navbar .nav-links a,
+    .sticky-navbar .nav-links button {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
+
+/* Elegant & Professional Glass Section */
+.glass-section {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s ease;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle light reflection overlay */
+.glass-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.15), transparent 60%);
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+/* Hover effect - minimal, professional */
+.glass-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Title style */
+.glass-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #19311fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Text style */
+.glass-section p {
+    font-size: 0.80rem;
+    line-height: 1.6;
+    color: rgba(16, 66, 27, 0.85);
+}
+
+/* Subtle accent line */
+.glass-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #41a715, transparent, #41a715, transparent);
+    transform: translateX(-50%);
+    opacity: 0.6;
+}
+
+
+
