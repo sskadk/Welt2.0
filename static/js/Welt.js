@@ -1,3 +1,14 @@
+/* 
+   © 2025 Welt Research Pvt. Ltd. - Designed & Developed by
+   Swastik Adhikari - Kathmandu, Nepal
+   Website: https://swastikadhikari.com.np/
+   GitHub:  https://github.com/sskadk
+   Email:   adk.swastik246@gmail.com (Feel free to contact me)
+   Phone:   +977 9865503351 - Whatsapp/Viber (Feel free to contact me)
+   Remote Friendly - Contact me anytime
+*/
+
+
 
 //Navbar scroll script
 const navbar = document.getElementById("navbar");
