@@ -79,9 +79,7 @@ body, a, button {
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, border-color 0.2s ease;
 }
-
-
-/* Floating navbar */
+/* Floating navbar (default) */
 .sticky-navbar {
     position: absolute;
     top: 1rem;
@@ -91,66 +89,29 @@ body, a, button {
     backdrop-filter: blur(15px);
     background-color: rgba(187, 201, 184, 0.75);
     border-radius: 3rem;
+    width: 75%;
+    height: 60px; 
     max-width: 1200px;
-    width: 95%;
     z-index: 50;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1.5rem;
-    flex-wrap: wrap;
-}
-
-/* Navbar brand/logo */
-.sticky-navbar .brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1e1e1e;
-    text-decoration: none;
-    transition: font-size 0.3s ease;
-}
-
-/* Navbar links container */
-.sticky-navbar .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
+    align-items: center;
+    padding: 0px 0.5rem;
 }
 
-/* Navbar buttons/links */
-.sticky-navbar .nav-links a,
-.sticky-navbar .nav-links button {
-    color: #1e1e1e;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.sticky-navbar .nav-links a:hover,
-.sticky-navbar .nav-links button:hover {
-    background-color: rgba(65, 167, 21, 0.2);
-    color: #41a715;
-}
-
-/* Animated gradient border ONLY when floating */
+/* Animated gradient border when floating */
 .sticky-navbar::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(90deg, #5b5e5b, #41a715, #1ecfdbff, #d9ff01, #41a715, #ffffff);
+    background: linear-gradient(90deg, #5b5e5b, #41a715, #1ecfdb, #d9ff01, #41a715, #ffffff);
     background-size: 300% 300%;
     animation: borderAnim 10s linear infinite;
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -158,47 +119,62 @@ body, a, button {
     transition: opacity 0.3s ease;
 }
 
-/* Disable border animation when stuck */
+/* Normal full-width navbar when scrolled */
+.sticky-navbar.stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    background-color: rgba(197, 236, 203, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding-left: 1rem;   /* optional */
+    padding-right: 1rem;
+    height: 60px;          /* set desired height */
+    display: flex;
+    align-items: center;    /* vertically center content */
+}
+
+
+/* Remove animated border when stuck */
 .sticky-navbar.stuck::before {
     opacity: 0;
 }
 
-/* Stuck/fixed state */
-.sticky-navbar.stuck {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    border-radius: 3rem;
-    background-color: rgba(255, 255, 255, 0.10);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* Keyframes for animated border */
+/* Keyframes for gradient border */
 @keyframes borderAnim {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .sticky-navbar {
-        padding: 0.5rem 1rem;
         flex-direction: column;
         gap: 0.5rem;
+        padding: 1px 1rem;
+        height: auto; /* let it grow when menu opens */
     }
 
-    /* Brand/logo smaller on mobile */
-    .sticky-navbar .brand {
-        font-size: 12px;
+    .sticky-navbar.stuck {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: auto; /* natural height for menu */
     }
 
+    /* Nav links */
     .sticky-navbar .nav-links {
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
+        display: none; /* hidden by default */
+    }
+
+    .sticky-navbar .nav-links.active {
+        display: flex; /* shown when mobile menu is toggled */
     }
 
     .sticky-navbar .nav-links a,
@@ -206,6 +182,11 @@ body, a, button {
         width: 100%;
         text-align: center;
         padding: 0.5rem;
+    }
+
+    /* Optional: center logo */
+    .sticky-navbar a.flex.items-center {
+        justify-content: center;
     }
 }
 

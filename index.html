@@ -12,6 +12,7 @@ Remote Friendly - Contact me anytime  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welt Research Pvt. Ltd.</title>
+  <link rel="icon" type="image/svg+xml" href="static/img/welt.svg">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,13 +27,24 @@ Remote Friendly - Contact me anytime  -->
   <div id="cursor"></div>
   <div id="follower"></div>
 
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex justify-center items-center">
+    <div class="relative w-24 h-24 flex justify-center items-center">
+      <!-- Spinner Circle -->
+      <div class="absolute w-full h-full border-4 border-[#41a715] border-t-transparent rounded-full animate-spin"></div>
+      <!-- Logo (does not spin) -->
+      <img src="static/img/welt.svg" alt="Welt Research Logo" class="h-12 w-auto">
+    </div>
+  </div>
 
   <!-- Navbar -->
   <header id="navbar" class="sticky-navbar backdrop-blur-md shadow-md">
-    <nav class="flex justify-between items-center px-6 py-4 max-w-6xl w-full mx-auto">
+    <nav class="flex justify-between items-center px-6 py-4 max-w-7xl w-full mx-auto">
       <!-- Logo -->
-      <a href="#home" class="font-bold text-green-700 text-lg">Welt Research Pvt. Ltd.</a>
-
+      <a href="#home" class="flex items-center gap-2">
+        <img src="static/img/welt.svg" alt="Welt Research Logo" class="h-10 w-auto" oncontextmenu="return false;">
+        <span class="font-bold text-green-700 text-lg hidden sm:block">Welt Research Pvt. Ltd.</span>
+      </a>
       <!-- Hamburger Button (visible on small screens) -->
       <button id="menu-btn" class="md:hidden text-green-700 focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -374,7 +386,7 @@ Remote Friendly - Contact me anytime  -->
 
             <!-- Hover text overlay -->
             <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-            <p class="text-black text-sm px-4 text-justify">Alumnus of Amity University Haryana in Earth Sciences with a specialization in Climate Studies, he has over 6 years of research experience in Air Quality Dynamics, Dust Storms, Climate Change Impacts, and River Dynamics. His work is published in national and international journals, conference proceedings, and books, including the American Physical Society, and has been featured by NASA. A former student member of the American Physical Society and the Canadian Meteorological and Oceanographic Society, he is currently a member of the Environment and Social Development Association (New Delhi), Institute of Scholars (Bangalore), and Innovative Science Research Society (Shimla). In 2021, he received the “Young Environmentalist Award” from the Environment and Social Development Association at the World Environment Summit. He is also associated with the Centre for Science and Environment and serves on the Governing Council of the Gurukul Global Knowledge Foundation.</p>
+              <p class="text-black text-sm px-4 text-justify">Alumnus of Amity University Haryana in Earth Sciences with a specialization in Climate Studies, he has over 6 years of research experience in Air Quality Dynamics, Dust Storms, Climate Change Impacts, and River Dynamics. His work is published in national and international journals, conference proceedings, and books, including the American Physical Society, and has been featured by NASA. A former student member of the American Physical Society and the Canadian Meteorological and Oceanographic Society, he is currently a member of the Environment and Social Development Association (New Delhi), Institute of Scholars (Bangalore), and Innovative Science Research Society (Shimla). In 2021, he received the “Young Environmentalist Award” from the Environment and Social Development Association at the World Environment Summit. He is also associated with the Centre for Science and Environment and serves on the Governing Council of the Gurukul Global Knowledge Foundation.</p>
             </div>
         </div>
         <div class="glass-section h-[28rem] p-6 text-center relative group rounded-xl overflow-hidden cursor-pointer">

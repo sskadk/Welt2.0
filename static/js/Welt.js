@@ -8,16 +8,21 @@
    Remote Friendly - Contact me anytime
 */
 
-
+// Hide preloader after page load
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => preloader.style.display = "none", 500);
+});
 
 //Navbar scroll script
-const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-        navbar.classList.add("stuck");
-    } else {
-        navbar.classList.remove("stuck");
-    }
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("stuck");
+  } else {
+    navbar.classList.remove("stuck");
+  }
 });
 
 //Navbar for small devices
@@ -26,6 +31,12 @@ const menu = document.getElementById('menu');
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
+});
+
+const menuBtn = document.getElementById('menu-btn');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
 });
 
 // Custom cursor movement
