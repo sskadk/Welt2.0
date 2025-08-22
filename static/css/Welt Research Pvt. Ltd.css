@@ -109,7 +109,7 @@ body, a, button {
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(90deg, #5b5e5b, #41a715, #1ecfdb, #d9ff01, #41a715, #ffffff);
+    background: linear-gradient(90deg, #5b5e5b, #41a715, #1ecfdb, #d9ff01, #a74b15, #ffffff);
     background-size: 300% 300%;
     animation: borderAnim 10s linear infinite;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
