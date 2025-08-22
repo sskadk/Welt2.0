@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Welt Research</title>
+  <link rel="icon" type="image/svg+xml" href="static/img/welt.svg">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-green-100 via-green-50 to-green-200 min-h-screen flex items-center justify-center">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex justify-center items-center">
+    <div class="relative w-20 h-20 flex justify-center items-center">
+      <div class="absolute w-full h-full border-4 border-[#41a715] border-t-transparent rounded-full animate-spin"></div>
+      <img src="static/img/welt.svg" alt="Welt Logo" class="h-10 w-auto">
+    </div>
+  </div>
+
+  <!-- Register Container -->
+  <div class="w-full max-w-3xl p-6 glass-section rounded-3xl shadow-2xl backdrop-blur-md grid md:grid-cols-2 gap-6">
+
+    <!-- Left Column: Logo & Welcome -->
+    <div class="flex flex-col items-center justify-center space-y-4 text-center">
+      <img src="static/img/welt.svg" alt="Welt Logo" class="w-20 h-20">
+      <h1 class="text-2xl font-bold text-green-800">Join Welt Research</h1>
+      <p class="text-green-700 text-sm">Create your account to start exploring</p>
+    </div>
+
+    <!-- Right Column: Registration Form -->
+    <div class="flex flex-col justify-center space-y-4">
+      <form class="space-y-4 text-sm">
+
+        <input type="text" id="fullname" placeholder="Full Name" 
+               class="w-full px-3 py-2 rounded-xl border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition" required>
+
+        <input type="email" id="email" placeholder="Email Address" 
+               class="w-full px-3 py-2 rounded-xl border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition" required>
+
+        <input type="text" id="memberid" placeholder="Member ID [WR-00000]" 
+               class="w-full px-3 py-2 rounded-xl border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition" required>
+
+        <input type="password" id="password" placeholder="Password" 
+               class="w-full px-3 py-2 rounded-xl border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition" required>
+
+        <input type="password" id="confirm-password" placeholder="Confirm Password" 
+               class="w-full px-3 py-2 rounded-xl border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition" required>
+
+        <label class="flex items-center gap-2 text-green-700 text-xs">
+          <input type="checkbox" id="terms" class="w-4 h-4 rounded border-green-400 focus:ring-2 focus:ring-green-500" required>
+          I agree to the <a href="index.html?modal=termsModal" class="font-semibold hover:text-[#41a715]">Terms & Conditions</a>
+        </label>
+
+        <button type="submit" 
+                class="w-full bg-green-700 hover:bg-green-800 text-white py-2 rounded-2xl font-semibold transition shadow-md">
+          Register
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="flex items-center my-4">
+        <hr class="flex-grow border-green-300">
+        <span class="mx-2 text-green-700 text-xs">OR</span>
+        <hr class="flex-grow border-green-300">
+      </div>
+
+      <!-- Social Register Buttons -->
+      <div class="flex gap-2 justify-center">
+        <a href="#" class="flex items-center gap-2 px-3 py-1 rounded-xl border border-green-300 hover:bg-green-50 transition text-xs">
+          <img src="static/img/Google.webp" alt="Google" class="w-4 h-4">
+          Google
+        </a>
+        <a href="#" class="flex items-center gap-2 px-3 py-1 rounded-xl border border-green-300 hover:bg-green-50 transition text-xs">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="w-4 h-4">
+          GitHub
+        </a>
+      </div>
+
+      <p class="text-green-700 text-center text-xs mt-2">
+        Already have an account? 
+        <a href="login.html" class="font-semibold hover:text-[#41a715]">Sign In</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="static/js/Welt.js"></script>
+</body>
+</html>

@@ -765,6 +765,20 @@ Remote Friendly - Contact me anytime  -->
 
   setupAccordion('#termsModal', '.accordion-item', '.accordion-content');
   setupAccordion('#faqModal', '.faq-item', '.faq-answer');
+
+  // Auto-open modal if URL has ?modal=MODAL_ID
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const modalId = params.get('modal');
+    if(modalId) {
+      const modal = document.getElementById(modalId);
+      if(modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+  });
+
 </script>
 <script src="static/js/Welt.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
