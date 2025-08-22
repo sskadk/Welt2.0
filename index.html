@@ -348,43 +348,92 @@ Remote Friendly - Contact me anytime  -->
   </section>
 
   <!-- Our Vision -->
-<section id="vision" class="py-20 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
-  <div class="max-w-6xl mx-auto px-6 glass-section p-10 space-y-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Vision</h2>
-    <p class="text-green-700 text-lg leading-relaxed">
-      At Welt Research Pvt. Ltd., our vision is to create a society where scientific innovation 
-      drives sustainable development, ensuring prosperity and well-being for all.  
-      We strive to solve socio-scientific challenges while fostering environmental stewardship 
-      and technological advancement.
-    </p>
-    <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-left text-green-700 text-sm max-w-3xl mx-auto">
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Promote green and sustainable technologies
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Advance research in natural sciences
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Enhance food security and agriculture innovation
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Develop cutting-edge medical instrumentation
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Harness AI, ML, IoT, and software solutions for societal benefit
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>
-        Drive collaborative scientific and industrial research
-      </li>
-    </ul>
-  </div>
-</section>
+  <section id="vision" class="py-20 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
+    <div class="max-w-6xl mx-auto px-6 glass-section p-10 grid grid-cols-12 md:grid-cols-10 gap-10 items-center">
+
+      <!-- iPhone Column (30%) -->
+      <div class="col-span-12 md:col-span-3 flex justify-center">
+        <div class="relative w-[225px] h-[450px] rounded-[37.5px] overflow-hidden group">
+
+          <!-- Idle Background -->
+          <div class="absolute inset-[2.25px] rounded-[36px] bg-cover bg-center" 
+              style="background-image:url('static/img/iNatureidle.jpg')"></div>
+
+          <!-- Hover Background -->
+          <div class="absolute inset-[4.25px] rounded-[36px] border-2 border-black bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style="background-image:url('static/img/iNature.jpg')"></div>
+
+          <!-- Hidden Checkbox for click toggle -->
+          <input type="checkbox" id="islandToggle" class="peer hidden">
+
+          <!-- Dynamic Island -->
+          <label for="islandToggle" class="absolute top-[12px] left-1/2 -translate-x-1/2 cursor-pointer">
+            <div class="bg-black rounded-full w-28 h-8 flex items-center justify-between px-3 py-1 transition-all duration-500
+                        group-hover:w-48 group-hover:h-10
+                        peer-checked:w-72 peer-checked:h-36 peer-checked:rounded-2xl">
+
+              <!-- Contact Details -->
+              <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 peer-checked:flex peer-checked:flex-col peer-checked:justify-center peer-checked:items-center transition-opacity duration-300">
+                <div class="w-8 h-8 bg-white rounded-full p-1 overflow-hidden peer-checked:w-16 peer-checked:h-16">
+                  <img src="static/img/welt.svg" class="w-full h-full object-cover rounded-full">
+                </div>
+                <p class="!text-white font-sm !text-[0.70em] text-center opacity-0 group-hover:opacity-100 peer-checked:opacity-100">
+                  Welt Calling...
+                </p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <!-- Reject Call -->
+                <button class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                  <i class="fa-solid fa-phone-flip text-white text-[0.7em]"></i>
+                </button>
+                <!-- Accept Call -->
+                <button class="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+                  <i class="fa-solid fa-phone text-white text-[0.7em]"></i>
+                </button>
+              </div>
+
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Vision / About Us Column (70%) -->
+      <div class="col-span-12 md:col-span-7 space-y-6 text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Vision</h2>
+        <p class="!text-green-700 text-lg leading-relaxed text-justify">
+          At Welt Research Pvt. Ltd., our vision is to create a society where scientific innovation 
+          drives sustainable development, ensuring prosperity and well-being for all.  
+          We strive to solve socio-scientific challenges while fostering environmental stewardship 
+          and technological advancement.
+        </p>
+        <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-green-700 text-sm">
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Promote green and sustainable technologies</li>
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Advance research in natural sciences</li>
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Enhance food security and agriculture innovation</li>
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Develop cutting-edge medical instrumentation</li>
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Harness AI, ML, IoT, and software solutions for societal benefit</li>
+          <li class="flex items-start gap-2"><span class="w-2 h-2 mt-2 rounded-full bg-green-700"></span>Drive collaborative scientific and industrial research</li>
+        </ul>
+        <!-- Additional Paragraph 1 -->
+        <p class="!text-green-700 text-lg leading-relaxed text-justify">
+          Our commitment extends beyond research and technology. We actively engage with communities, policymakers, 
+          and industry leaders to implement sustainable solutions, foster education, and promote awareness 
+          about the importance of scientific literacy for future generations.
+        </p>
+
+        <!-- Additional Paragraph 2 -->
+        <p class="!text-green-700 text-lg leading-relaxed text-justify">
+          By bridging the gap between science, society, and industry, we aim to create impactful innovations 
+          that not only solve current challenges but also inspire a culture of curiosity, collaboration, 
+          and responsibility towards our planet and its people.
+        </p>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- Team -->
@@ -398,7 +447,9 @@ Remote Friendly - Contact me anytime  -->
                 class="mx-auto w-24 h-24 rounded-full mb-4">
             <h3 class="text-lg font-semibold text-green-800">Shubhansh Tiwari</h3><hr>
             <p class="text-green-700 text-sm">Founder & President</p><br>
-            <p class="text-black-700 text-sm">shubhanshtiwari24@outlook.com</p>
+            <p class="text-black-700 text-sm"><strong>shubhanshtiwari24@outlook.com</p></strong></p><br>
+            <p class="text-black text-sm px-4 text-justify">An Amity University Haryana alumnus in Earth Sciences (Climate Studies), he has 6+ years’ research experience in air quality, climate change, and river dynamics, with publications in global journals. Awarded “Young Environmentalist” (2021), he is active in leading scientific and environmental organizations.</p>
+
 
             <!-- Hover text overlay -->
             <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
@@ -411,11 +462,14 @@ Remote Friendly - Contact me anytime  -->
                 class="mx-auto w-24 h-24 rounded-full mb-4">
             <h3 class="text-lg font-semibold text-green-800">Renuka Sharma</h3><hr>
             <p class="text-green-700 text-sm">Director & CEO</p><br>
-            <p class="text-black-700 text-sm">renukasharma375@gmail.com</p>
+            <p class="text-black-700 text-sm"><strong>renukasharma375@gmail.com</strong></p><br>
+            <p class="text-black text-sm px-4 text-justify">An alumna of Amity University Haryana and University of Mysore, she holds a degree in Applied Psychology and an MBA in Fashion Entrepreneurship. With 5 years’ experience, she has worked with Uniqlo, Satya Paul Reliance Brands, and BMW India.</p>
 
             <!-- Hover text overlay -->
             <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-            <p class="text-black text-sm px-4 text-justify">Alumnus of Amity University Haryana and University of Mysore. She did her graduation in applied psychology and MBA in Fashion Entrepreneurship. By profession she is a fashion designer and consultant and also a marketing expert. In her 5 years of professional carrier she was the part of different corporate groups including Uniqlo Pvt Ltd, Satya Paul Reliance Brands Ltd and BMW India.</p>
+            <p class="text-black text-sm px-4 text-justify">
+            An alumna of Amity University Haryana and the University of Mysore, she completed her graduation in Applied Psychology before pursuing an MBA in Fashion Entrepreneurship, giving her a strong foundation that combines human insight with entrepreneurial vision. With this unique blend of skills, she has built a career as a fashion designer, consultant, and marketing expert. Over the past five years, she has worked with several renowned corporate groups, including Uniqlo Pvt. Ltd, Satya Paul Reliance Brands Ltd, and BMW India, gaining valuable exposure to diverse aspects of the fashion and corporate world. Her work demonstrates not only her creativity in fashion design but also her ability to apply strategic business and marketing expertise. She has consistently bridged the gap between innovation and corporate expectations, creating impactful solutions that merge style, brand identity, and business growth. Her journey highlights a dynamic professional committed to excellence in both creative and business domains.
+            </p>
             </div>
         </div>
         <div class="glass-section h-[28rem] p-6 text-center relative group rounded-xl overflow-hidden cursor-pointer">
@@ -424,11 +478,14 @@ Remote Friendly - Contact me anytime  -->
                 class="mx-auto w-24 h-24 rounded-full mb-4">
             <h3 class="text-lg font-semibold text-green-800">Tanmay Mukharjee</h3><hr>
             <p class="text-green-700 text-sm">Co-Founder</p><br>
-            <p class="text-black-700 text-sm">mukherjee.tanmay4497@gmail.com</p>
+            <p class="text-black-700 text-sm"><strong>mukherjee.tanmay4497@gmail.com</strong></p><br>
+            <p class="text-black text-sm px-4 text-justify">Tanmay Mukherjee, an MBA from Jain University and Psychology graduate from Amity University, has 3+ years’ experience with ICICI Bank and LPU. As a soft skills trainer at LPU and Presidency University, he equips computer science students for corporate readiness.</p>
 
             <!-- Hover text overlay -->
             <div class="absolute inset-0 bg-white/100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-            <p class="text-black text-sm px-4 text-justify">A young explorer by soul, Mr. Tanmay Mukherjee is a MBA graduate with a zeal for more. He has a bachelor's degree in Clinical Psychology Honours from Amity University, Haryana and MBA from Jain University Bangalore. He is having a working experience of more than 3 years with ICIC Bank and also with Lovely Professional University. He worked as a soft skill trainer for the Computer Science Engineering Department at LPU and Presidency University Bengaluru for making the young techies industry and corporate ready.</p>
+            <p class="text-black text-sm px-4 text-justify">
+            A young explorer by soul, Mr. Tanmay Mukherjee is an enthusiastic professional with a passion for continuous growth and learning. He holds a bachelor’s degree in Clinical Psychology (Honours) from Amity University, Haryana, and a Master of Business Administration from Jain University, Bangalore. This unique combination of psychology and management has equipped him with a deep understanding of human behavior, organizational dynamics, and leadership principles. Over the past three years, he has gained valuable professional experience working with ICICI Bank, where he developed strong analytical and corporate skills, and with Lovely Professional University, where he contributed to academic and student development. His passion for mentoring and communication led him to work as a soft skills trainer for the Computer Science Engineering Departments at LPU and Presidency University, Bengaluru. In this role, he dedicated himself to preparing young engineering students with the interpersonal, communication, and professional skills required to succeed in the corporate world.
+            </p>
             </div>
         </div>
       </div>
@@ -437,17 +494,44 @@ Remote Friendly - Contact me anytime  -->
 
   <!-- Contact -->
   <section id="contact" class="py-20 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
-    <div class="max-w-4xl mx-auto px-6 glass-section p-10 space-y-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-green-800">Contact Us</h2>
-      <p class="text-green-700">We’d love to hear from you. Let’s collaborate for a sustainable future.</p>
-      <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
-        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
-        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400"></textarea>
-        <button class="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-600 transition">Send Message</button>
-      </form>
+    <div class="max-w-6xl mx-auto px-6 glass-section p-10 grid md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Contact Form -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800">Contact Us</h2>
+        <p class="text-green-700">We’d love to hear from you. Let’s collaborate for a sustainable future.</p>
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
+          <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400">
+          <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-400"></textarea>
+          <button class="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-600 transition">Send Message</button>
+        </form>
+      </div>
+
+      <!-- iMac Screen with Google Map -->
+      <div class="flex flex-col items-center">
+        <div class="relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden w-full max-w-lg aspect-[16/10] border-8 border-gray-800">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7001.220328517787!2d77.2167214!3d28.6448009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd3e5e34b0b7%3A0xa63e227fc75b1a4!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2snp!4v1692093984761!5m2!1sen!2snp" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <!-- iMac camera dot -->
+          <div class="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-600 rounded-full"></div>
+        </div>
+        <!-- Stand -->
+        <div class="w-24 h-4 bg-gray-700 rounded-b-lg"></div>
+        <div class="w-36 h-2 bg-gray-500 rounded"></div>
+      </div>
+
     </div>
   </section>
+
+
 </div>
 <!-- Footer -->
 <footer class="w-full bg-black/30 backdrop-blur-md py-12 text-center text-grey/80">
@@ -681,7 +765,6 @@ Remote Friendly - Contact me anytime  -->
   setupAccordion('#termsModal', '.accordion-item', '.accordion-content');
   setupAccordion('#faqModal', '.faq-item', '.faq-answer');
 </script>
-
 <script src="static/js/Welt.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <!-- Lucide Script -->

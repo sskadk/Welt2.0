@@ -63,7 +63,6 @@ interactiveElements.forEach(el => {
 });
 
 
-
 //Carousel Hero Section
 const slides = document.getElementById("carousel-slides");
 const totalSlides = slides.children.length;
