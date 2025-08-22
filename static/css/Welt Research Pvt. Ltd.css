@@ -19,36 +19,22 @@ body, a, button {
   cursor: none;
 }
 
-/* Scrollbar width */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* thinner and professional */
-  height: 10px;
+  width: 8px; /* slightly bigger for visibility */
 }
 
-/* Track (background of scrollbar) */
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05); /* subtle light background */
-  border-radius: 8px;
+  background: #10003513; /* dark background for contrast */
 }
 
-/* Scrollbar thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  background-color: #41a715; /* your green color */
-  border-radius: 8px;
-  border: 2px solid rgba(0, 0, 0, 0.05); /* slight spacing for clean look */
-  transition: background-color 0.3s, transform 0.2s;
+  background: linear-gradient(180deg, transparent 0%, #41a715 50%, transparent 100%);
+  border-radius: 0px;
 }
 
-/* Hover effect on thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #2e8c0f; /* slightly darker green on hover */
-  transform: scaleY(1.1); /* subtle scale for professional feel */
-}
-
-/* Optional: Firefox support */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #41a715 rgba(0, 0, 0, 0.05);
+  background: linear-gradient(180deg, #41a715 0%, transparent 50%, #41a715 100%);
 }
 
 /* Small fast pointer */
@@ -63,7 +49,7 @@ body, a, button {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.05s ease, background-color 0.2s ease;
+  transition: transform 0.08s ease, background-color 0.2s ease;
 }
 
 /* Larger trailing follower */
@@ -74,11 +60,11 @@ body, a, button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #41a715; /* default color */
+  border: 2px solid #41a715b4; /* default color */
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 /* Floating navbar (default) */
 .sticky-navbar {

@@ -590,7 +590,7 @@ Remote Friendly - Contact me anytime  -->
       <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="newsletterModal">Subscribe</span>
       <span class="hover:text-[#41a715] transition duration-200 cursor-pointer" data-modal-target="contactModal">Contact Us</span>
     </div>
-    <p class="text-sm mt-4">&copy; 2025 Welt Research Pvt. Ltd.</p>
+    <p class="text-sm mt-4">&copy; <span id="year"></span> Welt Research Pvt. Ltd. - All Rights Reserved</p>
   </div>
 </footer>
 
@@ -733,6 +733,8 @@ Remote Friendly - Contact me anytime  -->
 
 <!-- JS -->
 <script>
+  // Footer Scripts
+  document.getElementById("year").textContent = new Date().getFullYear();
   // Open modal
   document.querySelectorAll('[data-modal-target]').forEach(btn => {
     btn.addEventListener('click', () => {
