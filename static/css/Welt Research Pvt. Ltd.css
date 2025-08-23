@@ -21,7 +21,7 @@ body, a, button {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; /* slightly bigger for visibility */
+  width: 5px; /* slightly bigger for visibility */
 }
 
 ::-webkit-scrollbar-track {
@@ -34,7 +34,7 @@ body, a, button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #41a715 0%, transparent 50%, #41a715 100%);
+  background: linear-gradient(180deg, transparent 0%, #41a715 25%,  transparent 50%, #41a715 75%, transparent 100%);
 }
 
 /* Small fast pointer */
