@@ -14,9 +14,17 @@
 
   <!-- Preloader -->
   <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex justify-center items-center">
-    <div class="relative w-20 h-20 flex justify-center items-center">
-      <div class="absolute w-full h-full border-4 border-[#41a715] border-t-transparent rounded-full animate-spin"></div>
-      <img src="static/img/welt.svg" alt="Welt Logo" class="h-10 w-auto">
+    <div class="relative w-24 h-24 flex justify-center items-center">
+      <!-- Gradient Spinner -->
+      <div class="absolute w-full h-full rounded-full animate-spin"
+          style="
+            background: conic-gradient( #41a715, white, #027c6e, white, #41a715);
+            -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 0);
+            mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 0);
+          ">
+      </div>
+      <!-- Logo (does not spin) -->
+      <img src="static/img/welt.svg" alt="Welt Research Logo" class="h-12 w-auto">
     </div>
   </div>
 
